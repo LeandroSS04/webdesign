@@ -2,41 +2,57 @@ body{
     height: 100vh;
     margin: 0;
     font-family: sans-serif;
-    background-color: #ffffff;
+    background-color: #4692f5;
 }
 
 .container{
     display: grid; 
-    grid-template-columns: auto 80%;
-    grid-template-rows: auto 60% auto;
+    grid-template-areas: 
+    'cabecalho cabecalho cabecalho cabecalho cabecalho'
+    'sidebar conteudo conteudo conteudo conteudo'
+    'rodape rodape rodape rodape rodape';
+    grid-template-rows: auto 65vh auto;
     height: 100vh;
 }
 
 .cabecalho{
-    background-color: blue;
-    width: 100%;
-    justify-content: center;
-    align-content: center;
+    border: 10px solid #f5464f;
     font-size: 80px;
-   
+    grid-area: cabecalho;
+    text-align: center;
 }
 
 .sidebar{
-    background-color: green;
-    justify-content: center;
-    align-content: center;
+    border: 10px solid #f5464f;
+    grid-area: sidebar;
     font-size: 80px;
+    text-align: center;
 
 }
 
 .conteudo{
-   background-color: grey;
+    border: 10px solid #f5464f;
+   grid-area: conteudo;
+   display: grid;
+   grid-template-columns: auto auto auto auto auto auto auto;
+   row-gap: 3rem;
+   column-gap: 3rem;
+   padding: 2rem;
+   
+   
     
 }
 
-.rodape{
-    background-color: yellow;
-    width: 100% ;
+.conteudo div{
+    background-color: #95f546;
+    text-align: center;
+ 
+    font-size: 80px;
+}
 
+.rodape{
+    border: 10px solid #f5464f;
+    grid-area: rodape;
+    text-align: center;
     font-size: 80px;
 }
