@@ -1,4 +1,5 @@
 body{
+    font-size: 1em;
     height: 100vh;
     margin: 0;
     font-family: sans-serif;
@@ -6,53 +7,64 @@ body{
 }
 
 .container{
-    display: grid; 
-    grid-template-areas: 
-    'cabecalho cabecalho cabecalho cabecalho cabecalho'
-    'sidebar conteudo conteudo conteudo conteudo'
-    'rodape rodape rodape rodape rodape';
-    grid-template-rows: auto 65vh auto;
     height: 100vh;
+    display: grid; 
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    'cabecalho cabecalho'
+    'sidebar conteudo'
+    'rodape rodape';
+    
+    
 }
 
+.cabecalho,
+.sidebar,
+.conteudo,
+.rodape{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+
 .cabecalho{
-    border: 10px solid #f5464f;
-    font-size: 80px;
+    border: 1px solid #f5464f;
     grid-area: cabecalho;
     text-align: center;
 }
 
 .sidebar{
-    border: 10px solid #f5464f;
+    border: 1px solid #f5464f;
     grid-area: sidebar;
-    font-size: 80px;
     text-align: center;
 
 }
 
 .conteudo{
-    border: 10px solid #f5464f;
+    border: 1px solid #f5464f;
    grid-area: conteudo;
    display: grid;
-   grid-template-columns: auto auto auto auto auto auto auto;
-   row-gap: 3rem;
-   column-gap: 3rem;
-   padding: 2rem;
-   
-   
+   /*grid-template-columns: auto auto auto auto auto auto auto;*/
+   grid-gap: 1rem;
+   padding: 1rem;
+   grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+   grid-auto-rows: 150px;
+   justify-content: stretch;
+   align-content: stretch;
     
 }
 
-.conteudo div{
+.card-item{
     background-color: #95f546;
     text-align: center;
- 
-    font-size: 80px;
+
 }
 
 .rodape{
-    border: 10px solid #f5464f;
+    border: 1px solid #f5464f;
     grid-area: rodape;
     text-align: center;
-    font-size: 80px;
 }
