@@ -20,15 +20,46 @@ body {
   aside{
       grid-area: aside;
       padding: 1rem;
-      border: 1px solid red;
+     
   }
 
   main{
+      display: grid;
       grid-area: main;
       padding: 1rem;
-      border: 1px solid blue;
+      width: 800px;
+      
+      justify-content: center;
+      align-content: center;
   }
 
-  main h1{
-      font-size: 70px;
+  main a{
+      font-size: 2rem;
+      color: #000000;
+      margin-top: 100px;
   }
+ 
+  .main-conteudo{
+      
+      width: 782px;
+      padding: 1rem;
+      
+  }
+
+  .main-conteudo h1{
+      
+      width: 340px;
+      font-size: 2.8rem;
+      font-style: bold;
+      text-align: left;
+  }
+
+  .main-conteudo p{
+      
+      width: 600px;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      text-align: justify;
+      line-height: 1.5;
+  }
+
